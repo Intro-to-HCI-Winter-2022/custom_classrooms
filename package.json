@@ -1,0 +1,24 @@
+{
+  "name": "starterpack-jts307",
+  "version": "1.0.0",
+  "description": "*description*",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dartmouth-cs52-21S/starterpack-jts307.git"
+  },
+  "author": "Jacob Werzinsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dartmouth-cs52-21S/starterpack-jts307/issues"
+  },
+  "homepage": "https://github.com/dartmouth-cs52-21S/starterpack-jts307#readme",
+  "devDependencies": {
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
