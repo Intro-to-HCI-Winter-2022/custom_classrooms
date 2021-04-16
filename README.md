@@ -1,13 +1,5 @@
-# Title
+# Starter Pack
 
-*description*
+Starter Pack description on Canvas
 
-[deployed url](http://url-if-deployed-here)
-
-## What Worked Well
-
-## What Didn't
-
-## Extra Credit
-
-## Screenshots
+[Link to website](https://angry-curran-c8eb8e.netlify.app/)
