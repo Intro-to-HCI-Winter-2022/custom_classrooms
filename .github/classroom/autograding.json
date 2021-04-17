@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "tests": [
     {
@@ -11,4 +12,19 @@
       "points": null
     }
   ]
+=======
+{
+  "tests": [
+    {
+      "name": "eslint",
+      "setup": "npm install",
+      "run": "npm test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+>>>>>>> ca7ab45363382821e9ed69dcfd740f3997fa8654
 }

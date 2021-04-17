@@ -1,0 +1,18 @@
+body, html {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to bottom, rgb(133,255,198) 0%,rgb(83,241,241) 40%,rgb(5,45,224) 100%);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 50px;
+  color: #011407;
+}
+.logo {
+  background-image: url('img/KennyMcCormick.png');
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
