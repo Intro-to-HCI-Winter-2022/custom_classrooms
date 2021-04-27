@@ -6,13 +6,31 @@ body, html {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   color: #011407;
 }
 .logo {
   background-image: url('img/KennyMcCormick.png');
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   background-repeat: no-repeat;
   background-size: contain;
+}
+.active {
+  color: pink;
+}
+nav {
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    li {
+      margin-right: 5vw;
+      font-size: 2em;
+    }
+  }
+}
+p {
+  font-size: .7em;
 }
