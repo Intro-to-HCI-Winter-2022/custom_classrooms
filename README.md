@@ -4,6 +4,6 @@
 
 GitHub usernames for each team member:
 
-- Member: Jacob Werzinsky / Github Username: jts307
+- Jacob Werzinsky's username: jts307
 
 *Please replace this text with any additional comments you have about the assignment, your repository structure, etc.*
