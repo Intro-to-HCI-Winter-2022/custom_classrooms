@@ -1,6 +1,10 @@
+$app-color-1: #c6538c;
+$app-color-2: #111111;
+
+
 body, html {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(to bottom, rgb(133,255,198) 0%,rgb(83,241,241) 40%,rgb(5,45,224) 100%);
+  background: linear-gradient(to bottom, $app-color-2 0%,rgb(83,241,241) 40%,rgb(5,45,224) 100%);
   height: 100%;
   display: flex;
   justify-content: center;
@@ -35,6 +39,9 @@ nav {
     }
   }
 }
+#hello {
+  background-color: $app-color-1;
+}
 .sign_in_up{
   display: flex;
   flex-direction: column;
@@ -47,4 +54,6 @@ p {
 
 button {
   max-width: 200px;
+  border-radius: 10px;
+  border: none;
 }

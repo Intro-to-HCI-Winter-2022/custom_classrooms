@@ -6,7 +6,7 @@ import SignInAndUp from './signInAndUp';
 import LandingPage from './landing_page';
 import HomePage from './home_page';
 import JoinMeetingPage from './join_meeting_page';
-import Classroom from './classroom';
+import Classroom from './Classroom/classroom';
 
 const FallBack = (props) => {
   return <div>URL Not Found</div>;
