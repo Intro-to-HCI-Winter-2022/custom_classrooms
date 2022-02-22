@@ -18,7 +18,7 @@ body, html {
   padding: 0;
 }
 .logo {
-  background-image: url('img/KennyMcCormick.png');
+  background-image: url('../public/assets/KennyMcCormick.png');
   width: 200px;
   height: 200px;
   background-repeat: no-repeat;
@@ -56,4 +56,21 @@ button {
   max-width: 200px;
   border-radius: 10px;
   border: none;
+}
+
+.classroom_container {
+  padding-top: 50px;  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.images-buffer {
+  display: none;
+}
+
+.game-ui {
+  padding: 25px;
+  border: 1px solid dimgray;
+  border-radius: 15px;
 }
