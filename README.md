@@ -12,3 +12,7 @@ GitHub usernames for each team member:
 
 ## Instructions for starting the website locally
 
+
+## Tutorials used
+For 2d top down view: https://levelup.gitconnected.com/rpg-game-with-react-redux-html5-part-1-build-a-tile-map-9144fd867830
+
