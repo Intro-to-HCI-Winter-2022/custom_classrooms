@@ -13,7 +13,7 @@ class JoinMeetingPage extends Component {
   }
 
   onConfirmPress = (event) => {
-    this.props.history.push('/classroom/123456');
+    this.props.history.push('/classroom/1');
   }
 
   onBackPress = (event) => {
