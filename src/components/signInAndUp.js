@@ -125,11 +125,11 @@ class SignInAndUp extends Component {
             </div>
             <div className="form_input">
               <p>Password:</p>
-              <input onChange={this.onPasswordChange} onKeyDown={this.handleEnterPress} value={this.state.password} />
+              <input onChange={this.onPasswordChange} onKeyDown={this.handleEnterPress} value={'*'.repeat(this.state.password.length)} />
             </div>
             <div style={{ display: signUpFields }} className="form_input">
               <p>Confirm Password:</p>
-              <input onChange={this.onConfirmPasswordChange} onKeyDown={this.handleEnterPress} value={this.state.confirmPassword} />
+              <input onChange={this.onConfirmPasswordChange} onKeyDown={this.handleEnterPress} value={'*'.repeat(this.state.confirmPassword.length)} />
             </div>
             <div style={{ display: signUpFields }} className="form_input">
               <p>Email:</p>
