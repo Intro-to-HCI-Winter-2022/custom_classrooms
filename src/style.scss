@@ -1,10 +1,10 @@
-$app-color-1: #c6538c;
+$app-color-1: #ffffff;
 $app-color-2: #111111;
 
 
 body, html {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(to bottom, $app-color-2 0%,rgb(83,241,241) 40%,rgb(5,45,224) 100%);
+  background: $app-color-1;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@ body, html {
   padding: 0;
 }
 .logo {
-  background-image: url('../public/assets/KennyMcCormick.png');
+  background-image: url('../public/assets/logo.png');
   width: 200px;
   height: 200px;
   background-repeat: no-repeat;
@@ -56,6 +56,8 @@ button {
   max-width: 200px;
   border-radius: 10px;
   border: none;
+  padding: 10px;
+  margin: 10px;
 }
 
 .classroom_container {
@@ -63,6 +65,11 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.landing_page_buttons, .sign_in_up {
+  display: flex;
+  flex-direction: column;
 }
 
 .images-buffer {
@@ -73,4 +80,8 @@ button {
   padding: 25px;
   border: 1px solid dimgray;
   border-radius: 15px;
+}
+
+.top_nav_bar {
+  display: flex;
 }
