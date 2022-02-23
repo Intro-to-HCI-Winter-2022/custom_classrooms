@@ -145,7 +145,7 @@ class SignInAndUp extends Component {
             <div id="warning" style={{ display: `${this.state.displayWarning}` }}>Please fill out all fields.</div>
             <div id="warning" style={{ display: `${this.state.displayPasswordWarning}` }}>Passwords do not match.</div>
           </div>
-          <ArrowBackIosIcon onClick={this.onBackPress} />
+          <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
         </div>
       </div>
     );

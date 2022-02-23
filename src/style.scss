@@ -6,11 +6,6 @@ $app-color-3: #3fff34;
 body, html {
   font-family: "Roboto", sans-serif;
   background: $app-color-1;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   font-size: 40px;
   color: #011407;
 }
@@ -46,9 +41,16 @@ nav {
   }
 }
 
-#hello {
-  background-color: $app-color-1;
+.top_left_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
+
+.classroom_overlay {
+  position: fixed;
+}
+
 .sign_in_up{
   display: flex;
   flex-direction: column;
@@ -65,6 +67,11 @@ button {
   border: none;
   padding: 10px;
   margin: 10px;
+  cursor: pointer;
+}
+
+.icon {
+  cursor: pointer;
 }
 
 .classroom_container {
