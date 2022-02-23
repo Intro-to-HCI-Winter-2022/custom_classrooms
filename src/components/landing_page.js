@@ -12,7 +12,7 @@ const LandingPage = (props) => {
 
   return (
     <div className="landing_page_container">
-      <div className="logo" id="hello" />
+      <div className="logo" />
       <div className="landing_page_buttons">
         <button type="button" onClick={onJoinPress}>Join A Classroom</button>
         <button type="button" onClick={onSignInPress}>Sign In</button>

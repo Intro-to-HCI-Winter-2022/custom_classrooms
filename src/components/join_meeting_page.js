@@ -3,7 +3,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import TopNav from './top_nav';
-import HelpButton from './help_info_popup';
+import HelpButton from './help_button';
 
 class JoinMeetingPage extends Component {
   constructor(props) {
@@ -156,7 +156,7 @@ class JoinMeetingPage extends Component {
           it once they are in a meeting under “Class code”.
           For demo purposes, use code 123456."
           />
-          <ArrowBackIosIcon onClick={this.onBackPress} />
+          <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
           <p style={{ display: this.state.showCodeErrorMessage }}>A Classroom with that code does not exist!</p>
         </div>
       );
@@ -173,7 +173,7 @@ class JoinMeetingPage extends Component {
           </div>
           <button type="button" onClick={this.onReEnterPress} className="button">Re-enter Class Code</button>
           <button type="button" onClick={this.onClassroomConfirmPress} className="button">Confirm</button>
-          <ArrowBackIosIcon onClick={this.onBackPress} />
+          <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
         </div>
       );
     } else if (this.state.currentView === 'EnterName') {
@@ -183,7 +183,7 @@ class JoinMeetingPage extends Component {
           <h1>What is your name?</h1>
           <input className="enter_name_input" onChange={this.onNameChange} onKeyDown={this.handleNameEnterPress} value={this.state.unAuthUserName} />
           <button type="button" onClick={this.onNameConfirmPress} className="button">Confirm</button>
-          <ArrowBackIosIcon onClick={this.onBackPress} />
+          <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
           <p style={{ display: this.state.showNameErrorMessage }}>Please enter a name.</p>
         </div>
       );
@@ -200,7 +200,7 @@ class JoinMeetingPage extends Component {
           </p>
           <button type="button" onClick={this.onNoPress} className="button">No</button>
           <button type="button" onClick={this.onYesPress} className="button">Yes</button>
-          <ArrowBackIosIcon onClick={this.onBackPress} />
+          <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
         </div>
       );
     } else {
@@ -208,7 +208,7 @@ class JoinMeetingPage extends Component {
         <div className="join_info_container">
           <TopNav />
           <h1>That is weird, for some reason the page did not load properly. I guess try to reload the page, idk.</h1>
-          <ArrowBackIosIcon onClick={this.onBackPress} />
+          <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
         </div>
       );
     }
