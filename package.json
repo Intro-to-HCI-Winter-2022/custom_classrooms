@@ -1,5 +1,5 @@
 {
-  "name": "starterpack-jts307",
+  "name": "custom-classrooms",
   "version": "1.0.0",
   "description": "*description*",
   "main": "src/index.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dartmouth-cs52-21S/starterpack-jts307.git"
+    "url": "git+https://github.com/Intro-to-HCI-Winter-2022/p4-group-7.git"
   },
   "author": "Jacob Werzinsky",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dartmouth-cs52-21S/starterpack-jts307/issues"
+    "url": "https://github.com/Intro-to-HCI-Winter-2022/p4-group-7/issues"
   },
-  "homepage": "https://github.com/dartmouth-cs52-21S/starterpack-jts307#readme",
+  "homepage": "https://github.com/Intro-to-HCI-Winter-2022/p4-group-7#readme",
   "devDependencies": {
     "@babel/core": "^7.13.15",
     "@babel/eslint-parser": "^7.13.14",

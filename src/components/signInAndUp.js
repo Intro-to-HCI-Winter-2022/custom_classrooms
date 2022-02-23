@@ -31,7 +31,9 @@ class SignInAndUp extends Component {
   }
 
   onUserNameChange = (event) => {
-    this.setState({ username: event.target.value });
+    if (event.target.value.length <= 30) {
+      this.setState({ username: event.target.value });
+    }
   }
 
   // function returns true if input fields are valid, i.e. they have something in them
@@ -62,7 +64,7 @@ class SignInAndUp extends Component {
       this.setState({ displayPasswordWarning: 'none' });
       // sign in the user
       if (this.props.match.path === '/signin') {
-        this.props.signinUser({ email: this.state.email, password: this.state.password }, this.props.history);
+        this.props.signinUser({ username: this.state.username, password: this.state.password }, this.props.history);
       // attempt to sign up the user
       } else if (inputs.password === inputs.confirmPassword) {
         this.props.signupUser(inputs, this.props.history);

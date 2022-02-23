@@ -22,13 +22,11 @@ class HelpButton extends Component {
     return (
       <div className="help_button">
         <HelpIcon onClick={this.onHelpPress} />
-        <div className="help_background"
-          style={{ display: this.state.modalDisplay }}
-        />
+        <div className="help_background" style={{ display: this.state.modalDisplay }} role="region" onClick={this.onConfirmPress} />
         <div z-index={1} style={{ display: this.state.modalDisplay }} className="help_pop_up">
           <h1>Help Information</h1>
           <p>{this.props.helpInformation}</p>
-          <button type="button" onClick={this.onConfirmPress} className="button">Confirm</button>
+          <button type="button" onClick={this.onConfirmPress} className="button">Okay!</button>
         </div>
       </div>
     );
