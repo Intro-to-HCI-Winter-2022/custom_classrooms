@@ -1,5 +1,6 @@
 $app-color-1: #ffffff;
 $app-color-2: #111111;
+$app-color-3: #3fff34;
 
 
 body, html {
@@ -13,10 +14,12 @@ body, html {
   font-size: 40px;
   color: #011407;
 }
+
 * {
   margin: 0;
   padding: 0;
 }
+
 .logo {
   background-image: url('../public/assets/logo.png');
   width: 200px;
@@ -24,9 +27,12 @@ body, html {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.active {
-  color: pink;
+
+mark {
+  background: none;
+  color: $app-color-3;
 }
+
 nav {
   ul {
     display: flex;
@@ -39,6 +45,7 @@ nav {
     }
   }
 }
+
 #hello {
   background-color: $app-color-1;
 }
@@ -86,10 +93,16 @@ button {
   display: flex;
 }
 
+
 .help_pop_up {
-  position: fixed;
-  top: 50%;
+  // used this resource to figure out how to center modal: https://stackoverflow.com/questions/39627549/how-to-center-modal-to-the-center-of-screen
+  position: absolute;
   left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: fit-content;
+  background-color: purple;
 }
 
 .help_background {
@@ -97,5 +110,6 @@ button {
   width: 100%;
   height: 100%;
   left: 0;
-  background-color: 'grey';
+  top: 0;
+  background-color: rgba($app-color-1, 0.5);
 }

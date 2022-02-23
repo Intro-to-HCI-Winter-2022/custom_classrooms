@@ -12,6 +12,7 @@ const HomePage = (props) => {
   return (
     <div className="home_page_container">
       <TopNav />
+      <p>Hey <mark>{props.username}</mark>, would you like to join, start, or design a classroom?</p>
       <nav className="home_navigation_buttons">
         <ul>
           <li><NavLink to="/joinmeeting" exact>Join</NavLink></li>
@@ -24,6 +25,10 @@ const HomePage = (props) => {
   );
 };
 
-export default withRouter(connect(null, {
+const mapStateToProps = (state) => ({
+  username: state.user.username,
+});
+
+export default withRouter(connect(mapStateToProps, {
   signoutUser,
 })(HomePage));

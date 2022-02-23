@@ -5,12 +5,14 @@ import AuthReducer from './auth-reducer';
 import characterReducer from '../slices/characterSlice';
 import mapImagesReducer from '../slices/mapImagesSlice';
 import statusReducer from '../slices/statusSlice';
+import UserReducer from './user-reducer';
 
 const rootReducer = combineReducers({
   auth: AuthReducer,
   mapImagesLoaded: mapImagesReducer,
   gameStatus: statusReducer,
   character: characterReducer,
+  user: UserReducer,
 });
 
 export default rootReducer;
