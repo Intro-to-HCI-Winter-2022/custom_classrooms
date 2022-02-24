@@ -31,6 +31,7 @@ export function signupUser({ email, password, username }, history) {
 export function signoutUser(history) {
   return (dispatch) => {
     history.push('/');
+    localStorage.removeItem('custom_classrooms_token');
     dispatch({ type: ActionTypes.DEAUTH_USER });
   };
 }

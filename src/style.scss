@@ -1,6 +1,9 @@
 $app-color-1: #ffffff;
 $app-color-2: #111111;
 $app-color-3: #3fff34;
+$app-color-4: #e6e6e6;
+$app-purple:#916ed8;
+
 
 
 body, html {
@@ -15,12 +18,21 @@ body, html {
   padding: 0;
 }
 
+.big_logo{
+  width: 300px;
+  height: 300px;
+}
+
+.small_logo{
+  width: 100px;
+  height: 100px;
+}
+
 .logo {
   background-image: url('../public/assets/logo.png');
-  width: 200px;
-  height: 200px;
   background-repeat: no-repeat;
   background-size: contain;
+  margin-bottom: 50px;
 }
 
 mark {
@@ -68,6 +80,8 @@ button {
   padding: 10px;
   margin: 10px;
   cursor: pointer;
+  background-color:#916ed8;
+  color:#ffffff
 }
 
 .icon {
@@ -85,6 +99,17 @@ button {
   display: flex;
   flex-direction: column;
 }
+
+.landing_page_container{
+  height: 700px;
+
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 
 .images-buffer {
   display: none;
@@ -119,4 +144,101 @@ button {
   left: 0;
   top: 0;
   background-color: rgba($app-color-1, 0.5);
+}
+
+.enter_name_container{
+  margin:30px;
+}
+
+.name_container{
+  display:flex;
+  height: 400px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  font-size:50px;
+  font-family: 'Roboto';
+  color:$app-purple
+}
+
+.enter_name_input{
+  margin-top: 40px;
+  background-color: $app-purple;
+  border: none;
+  width: 450px;
+  height: 30px;
+  border-radius: 18px;
+  margin-bottom: 100px;
+  color: white;
+  font-size:18px;
+  outline-style: none;
+  text-indent: 20px;
+
+}
+
+.name_button {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  background-color:#916ed8;
+  font-size: 20px;
+  color:#ffffff
+}
+
+.icon{
+  position: absolute;
+  bottom:40px;
+  left:40px;
+}
+
+.class_code_input_container{
+  margin:10px;
+}
+
+.class_code_container{
+  display:flex;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.class_code_input{
+  margin-top: 40px;
+  background-color: $app-purple;
+  border: none;
+  width: 550px;
+  height: 30px;
+  border-radius: 18px;
+  margin-bottom: 100px;
+  color: white;
+  font-size:18px;
+  outline-style: none;
+  text-indent: 20px;
+}
+
+.button{
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  background-color:#916ed8;
+  font-size: 20px;
+  color:#ffffff
+}
+
+.help_button{
+   display:absolute;
+   left: 1300px;
+   bottom:40px;
 }

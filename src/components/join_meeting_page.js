@@ -146,18 +146,20 @@ class JoinMeetingPage extends Component {
       return (
         <div className="class_code_input_container">
           <TopNav />
-          <h1>Enter Classroom Code</h1>
-          <input type="text" pattern="[0-9]*" className="class_code_input" onChange={this.onClassCodeChange} onKeyDown={this.handleCodeEnterPress} value={this.state.classCode} />
-          <button type="button" onClick={this.onClearPress} className="button">Clear</button>
-          <button type="button" onClick={this.onCodeConfirmPress} className="button">Confirm</button>
-          <HelpButton helpInformation="
-          Your professor should have provided you this code!
-          If not, ask your professor about it! They can find
-          it once they are in a meeting under “Class code”.
-          For demo purposes, use code 123456."
-          />
-          <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
-          <p style={{ display: this.state.showCodeErrorMessage }}>A Classroom with that code does not exist!</p>
+          <div className="class_code_container">
+            <h1>Enter Classroom Code</h1>
+            <input type="text" pattern="[0-9]*" className="class_code_input" onChange={this.onClassCodeChange} onKeyDown={this.handleCodeEnterPress} value={this.state.classCode} />
+            <button type="button" onClick={this.onClearPress} className="button">Clear</button>
+            <button type="button" onClick={this.onCodeConfirmPress} className="button">Confirm</button>
+            <HelpButton helpInformation="
+            Your professor should have provided you this code!
+            If not, ask your professor about it! They can find
+            it once they are in a meeting under “Class code”.
+            For demo purposes, use code 123456."
+            />
+            <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
+            <p style={{ display: this.state.showCodeErrorMessage }}>A Classroom with that code does not exist!</p>
+          </div>
         </div>
       );
     } else if (this.state.currentView === 'JoinInfo') {
@@ -178,13 +180,16 @@ class JoinMeetingPage extends Component {
       );
     } else if (this.state.currentView === 'EnterName') {
       return (
+
         <div className="enter_name_container">
           <TopNav />
-          <h1>What is your name?</h1>
-          <input className="enter_name_input" onChange={this.onNameChange} onKeyDown={this.handleNameEnterPress} value={this.state.unAuthUserName} />
-          <button type="button" onClick={this.onNameConfirmPress} className="button">Confirm</button>
-          <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
-          <p style={{ display: this.state.showNameErrorMessage }}>Please enter a name.</p>
+          <div className="name_container">
+            <h1>What is your name?</h1>
+            <input className="enter_name_input" onChange={this.onNameChange} onKeyDown={this.handleNameEnterPress} value={this.state.unAuthUserName} />
+            <button type="button" onClick={this.onNameConfirmPress} className="name_button">Confirm</button>
+            <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
+            <p style={{ display: this.state.showNameErrorMessage }}>Please enter a name.</p>
+          </div>
         </div>
       );
     } else if (this.state.currentView === 'ToggleTopDownView') {
