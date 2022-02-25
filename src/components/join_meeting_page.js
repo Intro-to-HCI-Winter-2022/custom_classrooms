@@ -3,6 +3,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import TopNav from './top_nav';
+import { getClassroom } from '../actions';
 import HelpButton from './help_button';
 
 class JoinMeetingPage extends Component {
@@ -91,15 +92,17 @@ class JoinMeetingPage extends Component {
 
   onYesPress = (event) => {
     this.props.history.push(`/classroom/${this.state.classCode}`, {
-      enabledTopDown: this.state.studentTopDownViewEnabled,
+      enabledTopDown: true,
       unAuthName: this.state.unAuthUserName,
+      classCode: this.state.classCode,
     });
   }
 
   onNoPress = (event) => {
     this.props.history.push(`/classroom/${this.state.classCode}`, {
-      enabledTopDown: this.state.studentTopDownViewEnabled,
+      enabledTopDown: false,
       unAuthName: this.state.unAuthUserName,
+      classCode: this.state.classCode,
     });
   }
 
@@ -236,4 +239,4 @@ const mapStateToProps = (state) => ({
   auth: state.auth.authenticated,
 });
 
-export default withRouter(connect(mapStateToProps, null)(JoinMeetingPage));
+export default withRouter(connect(mapStateToProps, { getClassroom })(JoinMeetingPage));

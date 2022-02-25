@@ -1,4 +1,3 @@
-// helper button and pop up used in classroom.js and joinmeeting.js
 import React, { Component } from 'react';
 import HelpIcon from '@mui/icons-material/Help';
 
@@ -21,7 +20,7 @@ class HelpButton extends Component {
   render() {
     return (
       <div className="help_button">
-        <HelpIcon className="icon help_button" onClick={this.onHelpPress} />
+        <HelpIcon style={this.props.style} className="icon help_button" onClick={this.onHelpPress} />
         <div className="help_background" style={{ display: this.state.modalDisplay }} role="region" onClick={this.onConfirmPress} />
         <div z-index={1} style={{ display: this.state.modalDisplay }} className="help_pop_up">
           <h1>Help Information</h1>

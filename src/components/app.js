@@ -18,10 +18,10 @@ const App = (props) => {
       <div>
         <Switch>
           <Route exact path="/" component={LandingPage} />
-          <Route path="/signin" component={SignInAndUp} />
-          <Route path="/signup" component={SignInAndUp} />
-          <Route path="/homepage" component={HomePage} />
-          <Route path="/joinmeeting" component={JoinMeetingPage} />
+          <Route exact path="/signin" component={SignInAndUp} />
+          <Route exact path="/signup" component={SignInAndUp} />
+          <Route exact path="/homepage" component={HomePage} />
+          <Route exact path="/joinmeeting" component={JoinMeetingPage} />
           <Route exact path="/classroom/:id" component={Classroom} />
           <Route component={FallBack} />
         </Switch>
