@@ -120,6 +120,10 @@ button {
   height: 100vh;
 }
 
+.space{
+  margin-top: 150px;
+}
+
 .images-buffer {
   display: none;
 }
@@ -288,7 +292,7 @@ h1{
    bottom:40px;
 }
 
-.joininfo_container{
+.join_info_container{
   display:flex;
   height: 400px;
   justify-content: center;

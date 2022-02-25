@@ -160,7 +160,7 @@ class JoinMeetingPage extends Component {
             For demo purposes, use code 123456."
               />
             </div>
-            <div>
+            <div className="space">
               <button type="button" onClick={this.onClearPress} className="button">Clear</button>
               <button type="button" onClick={this.onCodeConfirmPress} className="button">Confirm</button>
             </div>
