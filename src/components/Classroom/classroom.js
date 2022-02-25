@@ -93,7 +93,8 @@ class Classroom extends Component {
     let key = -13;
     const cameras = this.props.participants.map((element, index) => {
       key -= 1;
-      if ((index > 0) && (element !== '') && (element !== this.props.unAuthName) && (element !== this.props.username)) {
+      if ((index > 0) && (element !== '') && (index !== this.props.currentSeat)
+      && (element !== this.props.unAuthName) && (element !== this.props.username)) {
         return (
           <div key={key} style={{ display: this.state.showSideCameras ? 'inline' : 'none' }}>
             <CameraView
