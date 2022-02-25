@@ -10,17 +10,19 @@ const HomePage = (props) => {
   };
 
   return (
-    <div className="home_page_container">
+    <div className="home_page_container out">
       <TopNav />
-      <p>Hey <mark>{props.username}</mark>, would you like to join, start, or design a classroom?</p>
-      <nav className="home_navigation_buttons">
-        <ul>
-          <li><NavLink to="/joinmeeting" exact>Join</NavLink></li>
-          <li><NavLink to="/homepage" exact>Start</NavLink></li>
-          <li><NavLink to="/homepage" exact>Design</NavLink></li>
-        </ul>
-      </nav>
-      <button type="button" onClick={onLogOutPress}>Logout</button>
+      <div className="home_container">
+        <p className="home_hint">Hey <mark className="signup">{props.username}</mark>, would you like to join, start, or design a classroom?</p>
+        <nav className="home_navigation_buttons">
+          <ul>
+            <li><NavLink to="/joinmeeting" exact><div className="join_logo" /></NavLink></li>
+            <li><NavLink to="/homepage" exact><div className="start_logo" /></NavLink></li>
+            <li><NavLink to="/homepage" exact><div className="design_logo" /></NavLink></li>
+          </ul>
+        </nav>
+      </div>
+      <button className="logout_button" type="button" onClick={onLogOutPress}>Log Out</button>
     </div>
   );
 };

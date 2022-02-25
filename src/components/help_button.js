@@ -20,7 +20,7 @@ class HelpButton extends Component {
   render() {
     return (
       <div className="help_button">
-        <HelpIcon style={this.props.style} className="icon" onClick={this.onHelpPress} />
+        <HelpIcon style={this.props.style} className="icon help_button" onClick={this.onHelpPress} />
         <div className="help_background" style={{ display: this.state.modalDisplay }} role="region" onClick={this.onConfirmPress} />
         <div z-index={1} style={{ display: this.state.modalDisplay }} className="help_pop_up">
           <h1>Help Information</h1>

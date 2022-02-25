@@ -118,32 +118,32 @@ class SignInAndUp extends Component {
 
     return (
       <div className="sign_in_up_container">
-        <div className="logo" />
+        <div className="logo big_logo" />
         <div className="sign_in_up">
           <div className="sign_in_up_form">
             <div className="form_input">
-              <p>User Name:</p>
-              <input onChange={this.onUserNameChange} onKeyDown={this.handleEnterPress} value={this.state.username} />
+              <p className="inputbar">User Name:</p>
+              <input className="signin_bar" onChange={this.onUserNameChange} onKeyDown={this.handleEnterPress} value={this.state.username} />
             </div>
             <div className="form_input">
-              <p>Password:</p>
-              <input onChange={this.onPasswordChange} onKeyDown={this.handleEnterPress} value={'*'.repeat(this.state.password.length)} />
+              <p className="inputbar">Password:&nbsp;&nbsp;</p>
+              <input className="signin_bar" onChange={this.onPasswordChange} onKeyDown={this.handleEnterPress} value={'*'.repeat(this.state.password.length)} />
             </div>
             <div style={{ display: signUpFields }} className="form_input">
-              <p>Confirm Password:</p>
-              <input onChange={this.onConfirmPasswordChange} onKeyDown={this.handleEnterPress} value={'*'.repeat(this.state.confirmPassword.length)} />
+              <p className="inputbar">Confirm Password:</p>
+              <input className="signin_bar" onChange={this.onConfirmPasswordChange} onKeyDown={this.handleEnterPress} value={'*'.repeat(this.state.confirmPassword.length)} />
             </div>
             <div style={{ display: signUpFields }} className="form_input">
-              <p>Email:</p>
-              <input onChange={this.onEmailChange} onKeyDown={this.handleEnterPress} value={this.state.email} />
+              <p className="inputbar">Email:</p>
+              <input className="signin_bar" onChange={this.onEmailChange} onKeyDown={this.handleEnterPress} value={this.state.email} />
             </div>
-            <button type="button" onClick={this.onConfirmPress} className="button">{buttonText}</button>
+            <button type="button" onClick={this.onConfirmPress} className="button signin_button">{buttonText}</button>
             <div className="switch_sign_in_and_up">
-              <p>{switchText}</p>
-              <Link to={switchTo}>{switchButtonText}</Link>
+              <p className="signup_hint">{switchText}</p>
+              <Link className="signup" to={switchTo}>{switchButtonText}</Link>
             </div>
-            <div id="warning" style={{ display: `${this.state.displayWarning}` }}>Please fill out all fields.</div>
-            <div id="warning" style={{ display: `${this.state.displayPasswordWarning}` }}>Passwords do not match.</div>
+            <div id="warning" className="warning" style={{ display: `${this.state.displayWarning}` }}>Please fill out all fields.</div>
+            <div id="warning" className="warning" style={{ display: `${this.state.displayPasswordWarning}` }}>Passwords do not match.</div>
           </div>
           <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
         </div>

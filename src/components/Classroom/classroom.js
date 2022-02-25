@@ -7,11 +7,11 @@ import VideocamOffIcon from '@mui/icons-material/VideocamOff';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import TileView from './2d_top_down_view/TileView';
 import GameLoop from './2d_top_down_view/GameLoop';
-import HelpButton from '../help_button';
 import ClassroomMenu from './classroom_menu';
 import CamerasView from './cameras_view/cameras_view';
 import { getClassroom, changeSeat } from '../../actions';
 import CameraView from './cameras_view/camera_view';
+import HelpButton from '../help_button';
 
 class Classroom extends Component {
   constructor(props) {
