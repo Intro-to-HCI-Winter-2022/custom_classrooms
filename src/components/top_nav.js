@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter, NavLink } from 'react-router-dom';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { connect } from 'react-redux';
 
 const TopNav = (props) => {
@@ -8,7 +7,7 @@ const TopNav = (props) => {
     <nav>
       <ul className="top_nav_bar">
         <li><NavLink to={props.auth ? '/homepage' : '/'} exact><div className="logo small_logo" /></NavLink></li>
-        <li style={{ display: props.auth ? 'inline' : 'none' }}><NavLink to="/homepage" exact><AccountCircleIcon /></NavLink></li>
+        <li style={{ display: props.auth ? 'inline' : 'none' }}><NavLink to="/homepage" exact><div className="account_icon" /></NavLink></li>
       </ul>
     </nav>
   );
