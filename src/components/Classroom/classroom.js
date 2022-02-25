@@ -98,6 +98,7 @@ class Classroom extends Component {
         return (
           <div key={key} style={{ display: this.state.showSideCameras ? 'inline' : 'none' }}>
             <CameraView
+              style={{ position: 'absolute' }}
               unAuthName={this.props.studentName}
               className="student_side_cam"
               mic={this.props.mic}
@@ -109,7 +110,7 @@ class Classroom extends Component {
         );
       } else {
         return (
-          <div key={key} style={{ display: 'none' }} />
+          <div key={key} style={{ display: 'none', position: 'absolute' }} />
         );
       }
     });
@@ -169,7 +170,6 @@ class Classroom extends Component {
           </div>
           <div className="shared_slide" />
           <div className="bottom_menu">
-            <button type="button" onClick={this.onBackPress}>Back to Classroom View</button>
             <CameraView
               className="professor_side_cam"
               mic={this.props.mic}
@@ -177,6 +177,7 @@ class Classroom extends Component {
               participantName={this.props.participants[0]}
               seatNumber={0}
             />
+            <button type="button" onClick={this.onBackPress}>Back to Classroom View</button>
           </div>
         </div>
       );

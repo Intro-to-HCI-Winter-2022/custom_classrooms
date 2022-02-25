@@ -516,3 +516,17 @@ $in-w: $n-char*($char-w + $gap);
 		outline: none;
 	}
 }
+.bottom_menu {
+  display: flex;
+  justify-content:space-between;
+  button {
+    height: fit-content; 
+    align-self: flex-end;
+  }
+}
+.shared_slide{
+  height: 62vh;
+  width: auto;
+}
+.side_cameras{
+}
