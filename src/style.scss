@@ -77,14 +77,14 @@ p {
 }
 
 button {
-  max-width: 200px;
   border-radius: 10px;
   border: none;
   padding: 10px;
   margin: 10px;
   cursor: pointer;
   background-color:#916ed8;
-  color:#ffffff
+  color:#ffffff;
+  font-size:20px;
 }
 
 .icon {
@@ -258,7 +258,7 @@ h1{
 }
 
 .re-enter{
-  width: 500px;
+  width: 200px;
   font-size: 15px;
 }
 
@@ -343,7 +343,50 @@ h1{
    margin-left:130px;
  }
 
+.home_container{
+  height: 500px;
 
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home_hint{
+  color:$app-purple
+}
   
+.logout_button{
+  display:absolute;
+  left:10px;
+  width:100px;
+  height:50px;
+  font-size: 20px;
+  font-style: bold;
+}
 
+.home_navigation_buttons{
+  margin-top: 50px;
+}
+.join_logo {
+  background-image: url('../public/assets/join.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+}
+.start_logo {
+  background-image: url('../public/assets/start.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+}
+.design_logo {
+  background-image: url('../public/assets/design.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+}
 
