@@ -151,25 +151,29 @@ class JoinMeetingPage extends Component {
           <TopNav />
           <div className="class_code_container">
             <h1>Enter Classroom Code</h1>
-            <input type="text" pattern="[0-9]*" className="class_code_input" onChange={this.onClassCodeChange} onKeyDown={this.handleCodeEnterPress} value={this.state.classCode} />
-            <button type="button" onClick={this.onCodeConfirmPress} className="button">Confirm</button>
-            <button type="button" onClick={this.onClearPress} className="button">Clear</button>
-            <HelpButton helpInformation="
+            <div className="input_and_help_container">
+              <input type="text" pattern="[0-9]*" id="class_code_input" onChange={this.onClassCodeChange} onKeyDown={this.handleCodeEnterPress} value={this.state.classCode} />
+              <HelpButton helpInformation="
             Your professor should have provided you this code!
             If not, ask your professor about it! They can find
             it once they are in a meeting under “Class code”.
             For demo purposes, use code 123456."
-            />
-            <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
+              />
+            </div>
+            <div>
+              <button type="button" onClick={this.onClearPress} className="button">Clear</button>
+              <button type="button" onClick={this.onCodeConfirmPress} className="button">Confirm</button>
+            </div>
+            <ArrowBackIosIcon className="icon bottom_left" onClick={this.onBackPress} />
             <p style={{ display: this.state.showCodeErrorMessage }}>A Classroom with that code does not exist!</p>
           </div>
         </div>
       );
     } else if (this.state.currentView === 'JoinInfo') {
       return (
-        <div className="join_info_container out">
+        <div className="join_container out">
           <TopNav />
-          <div className="joininfo_container">
+          <div className="join_info_container">
             <h1>You will join:</h1>
             <div className="join_info_body">
               <p><b>Class:</b> {this.state.joinClassName}</p>
@@ -178,8 +182,8 @@ class JoinMeetingPage extends Component {
               <p><b>Current Student Number:</b> {this.state.currentStudentNumber}</p>
             </div>
             <button type="button" onClick={this.onClassroomConfirmPress} className="button">Confirm</button>
-            <button type="button" onClick={this.onReEnterPress} className="button re-enter">Re-enter Class Code</button>
-            <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
+            <button type="button" onClick={this.onReEnterPress} className="button">Re-enter Code</button>
+            <ArrowBackIosIcon className="icon bottom_left" onClick={this.onBackPress} />
           </div>
         </div>
       );
@@ -192,7 +196,7 @@ class JoinMeetingPage extends Component {
             <h1>What is your name?</h1>
             <input className="enter_name_input" onChange={this.onNameChange} onKeyDown={this.handleNameEnterPress} value={this.state.unAuthUserName} />
             <button type="button" onClick={this.onNameConfirmPress} className="name_button">Confirm</button>
-            <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
+            <ArrowBackIosIcon className="icon bottom_left" onClick={this.onBackPress} />
             <p style={{ display: this.state.showNameErrorMessage }}>Please enter a name.</p>
           </div>
         </div>
@@ -211,7 +215,7 @@ class JoinMeetingPage extends Component {
             </p>
             <button type="button" onClick={this.onYesPress} className="button">Yes</button>
             <button type="button" onClick={this.onNoPress} className="button">No</button>
-            <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
+            <ArrowBackIosIcon className="icon bottom_left" onClick={this.onBackPress} />
           </div>
         </div>
       );
@@ -220,7 +224,7 @@ class JoinMeetingPage extends Component {
         <div className="join_info_container">
           <TopNav />
           <h1>That is weird, for some reason the page did not load properly. I guess try to reload the page, idk.</h1>
-          <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
+          <ArrowBackIosIcon className="icon bottom_left" onClick={this.onBackPress} />
         </div>
       );
     }

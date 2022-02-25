@@ -15,8 +15,10 @@ class CameraView extends Component {
   }
 
   renderParticipantScreen() {
-    const WIDTH = 100;
-    const HEIGHT = 100;
+    const WIDTH = 241;
+    const HEIGHT = 164;
+    const APP_WHITE = '#E6E6E6';
+    const APP_BLUE = '#32BAD8';
     // seat currently seating in
     if ((this.props.currentSeat === this.props.seatNumber)) {
       if (this.props.video) {
@@ -30,11 +32,12 @@ class CameraView extends Component {
               height: HEIGHT,
               facingMode: 'user',
             }}
+            className="camera_view"
           />
         );
       } else {
         return (
-          <div style={{ height: WIDTH, width: WIDTH, backgroundColor: 'white' }}>
+          <div className="camera_view" style={{ height: HEIGHT, width: WIDTH, backgroundColor: APP_WHITE }}>
             <VideocamOffIcon className="icon" />
             <p>You</p>
           </div>
@@ -44,11 +47,12 @@ class CameraView extends Component {
     } else if (this.props.participantName === '' || (this.props.participantName === this.props.username) || (this.props.participantName === this.props.unAuthName)) {
       // if choosing a seat then highlight empty seats in blue otherwise make them white
       return (
-        <div style={{
-          height: WIDTH,
-          width: WIDTH,
-          backgroundColor: this.props.currentSeat === -1 ? 'blue' : 'white',
-        }}
+        <div className="camera_view"
+          style={{
+            height: HEIGHT,
+            width: WIDTH,
+            backgroundColor: this.props.currentSeat === -1 ? APP_BLUE : APP_WHITE,
+          }}
           onClick={this.onEmptyDeskPress}
           role="button"
           tabIndex={0}
@@ -59,10 +63,11 @@ class CameraView extends Component {
       // camera off views
       return (
         <div
+          className="camera_view"
           onClick={this.props.seatNumber === 0 ? this.props.onProfessorPress : () => {}}
           role="button"
           tabIndex={0}
-          style={{ height: WIDTH, width: WIDTH, backgroundColor: 'white' }}
+          style={{ height: HEIGHT, width: WIDTH, backgroundColor: APP_WHITE }}
         >
           <VideocamOffIcon className="icon" />
           <p>{this.props.participantName}</p>
@@ -73,7 +78,7 @@ class CameraView extends Component {
 
   render() {
     return (
-      <div className="camera_view">{this.renderParticipantScreen()}</div>
+      <div className={`${this.props.className}`}>{this.renderParticipantScreen()}</div>
     );
   }
 }

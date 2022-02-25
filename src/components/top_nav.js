@@ -5,8 +5,8 @@ import { connect } from 'react-redux';
 
 const TopNav = (props) => {
   return (
-    <nav id="top_nav_bar">
-      <ul>
+    <nav>
+      <ul className="top_nav_bar">
         <li><NavLink to={props.auth ? '/homepage' : '/'} exact><div className="logo small_logo" /></NavLink></li>
         <li style={{ display: props.auth ? 'inline' : 'none' }}><NavLink to="/homepage" exact><AccountCircleIcon /></NavLink></li>
       </ul>

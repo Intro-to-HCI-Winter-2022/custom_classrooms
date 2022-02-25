@@ -1,16 +1,15 @@
-$app-color-1: #ffffff;
-$app-color-2: #111111;
-$app-color-3: #3fff34;
-$app-color-4: #e6e6e6;
+$app-white: #E6E6E6;
 $app-purple:#916ed8;
-$app-blue: #32bad8;
+$app-blue: #32BAD8;
+
 
 
 body, html {
   font-family: "Roboto", sans-serif;
-  background: $app-color-1;
+  background: $app-white;
   font-size: 40px;
   color: #011407;
+  height: 100%;
 }
 
 * {
@@ -38,17 +37,9 @@ body, html {
   background-size: contain;
 }
 
-.t_chat {
-  background-image: url('../public/assets/t_to_talk.png');
-  width: 20px;
-  height: 20px;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 mark {
   background: none;
-  color: $app-color-3;
+  color: $app-blue;
 }
 
 nav {
@@ -87,10 +78,12 @@ button {
   border: none;
   padding: 10px;
   margin: 10px;
+  width: fit-content;
   cursor: pointer;
   background-color:#916ed8;
-  color:#ffffff;
-  font-size:20px;
+  color: $app-white;
+  font-size: 35px;
+  box-shadow: 0px 2px rgba(black, 0.2);
 }
 
 .icon, .chat_button{
@@ -108,34 +101,24 @@ button {
 
 .classroom_view {
   display: flex;
-}
-
-.cameras_view {
-  display: flex;
   justify-content: center;
-}
-
-.camera_view {
-  margin: 10px;
-  border-style: solid;
-  height: 100px;
 }
 
 .landing_page_buttons, .sign_in_up {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .landing_page_container{
-  height: 700px;
-
   display:flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  align-content: center;
+  height: 100vh;
 }
-
-
 
 .images-buffer {
   display: none;
@@ -160,7 +143,7 @@ button {
   transform: translate(-50%, -50%);
   width: 50%;
   height: fit-content;
-  background-color: purple;
+  background-color: $app-purple;
 }
 
 .help_background {
@@ -169,7 +152,7 @@ button {
   height: 100%;
   left: 0;
   top: 0;
-  background-color: rgba($app-color-1, 0.5);
+  background-color: rgba($app-white, 0.5);
 }
 
 .enter_name_container{
@@ -206,16 +189,13 @@ h1{
 }
 
 .name_button {
-  width: 100px;
-  height: 40px;
-  border-radius: 10px;
   border: none;
   padding: 10px;
   margin: 10px;
   cursor: pointer;
   background-color:#916ed8;
-  font-size: 20px;
-  color:#ffffff
+  font-size: 35px;
+  color: $app-white;
 }
 
 .icon{
@@ -245,17 +225,61 @@ h1{
   text-indent: 20px;
 }
 
-.button{
-  width: 100px;
-  height: 40px;
-  border-radius: 10px;
-  border: none;
-  padding: 10px;
+.cameras_view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+}
+
+.camera_view {
   margin: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .icon {
+    color: black;
+  }
+}
+
+.professor_cam {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.student_cam {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.chat_button {
+  display: flex;
+  flex-direction: row;
+  .t_chat {
+    background-image: url('../public/assets/t_to_talk.png');
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  p {
+    color: $app-purple;
+  }
+}
+
+.button{
+  border: none;
   cursor: pointer;
   background-color:#916ed8;
-  font-size: 20px;
-  color:#ffffff
+  font-size: 35px;
+  color: $app-white;
 }
 
 .help_button{
@@ -278,13 +302,14 @@ h1{
   color:$app-purple
 }
 
-.re-enter{
-  width: 200px;
-  font-size: 15px;
-}
-
 .out{
   margin:30px;
+}
+
+.class_code_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .enable_container{
@@ -301,7 +326,14 @@ h1{
   margin-bottom: 50px;
   margin-left: 150px;
   margin-right:150px;
-  color:$app-purple
+  color: $app-purple;
+}
+
+.input_and_help_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 
@@ -331,10 +363,9 @@ h1{
   border-radius: 10px;
   border: none;
   padding: 10px;
-  cursor: pointer;
   background-color:#916ed8;
   font-size: 20px;
-  color:#ffffff
+  color: $app-white;
 }
 
 .signin_button{
@@ -411,6 +442,28 @@ h1{
   height: 200px;
 }
 
+.top_menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  width: 100vw;
+  height: fit-content;
+}
+
+.top_nav_bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.bottom_left {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+}
+
 .menu_pop_up {
   // used this resource to figure out how to center modal: https://stackoverflow.com/questions/39627549/how-to-center-modal-to-the-center-of-screen
   position: absolute;
@@ -428,7 +481,7 @@ h1{
   height: 100%;
   left: 0;
   top: 0;
-  background-color: rgba($app-color-1, 0.5);
+  background-color: rgba($app-white, 0.5);
 }
 
 .shared_slide {
@@ -437,4 +490,29 @@ h1{
   height: 200px;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+$char-w: 1ch;
+$gap: .5*$char-w;
+$n-char: 6;
+$in-w: $n-char*($char-w + $gap);
+
+// code for input spaced underline is adapted from here: https://codepen.io/thebabydino/pen/mRrPwB
+#class_code_input {
+	display: block;
+	border: none;
+	padding: 0;
+	width: $in-w;
+	background: repeating-linear-gradient(90deg, 
+		$app-purple 0, $app-purple $char-w, 
+		transparent 0, transparent $char-w + $gap) 
+		0 100%/ #{$in-w - $gap} 2px no-repeat;
+	font: 5ch Roboto, monospace;
+	letter-spacing: $gap;
+
+  color: $app-purple;
+	
+	&:focus {
+		outline: none;
+	}
 }

@@ -121,25 +121,27 @@ class Classroom extends Component {
       return (
         <div className="classroom_container">
           <div className="classroom_overlay">
-            <div className="top_left_menu">
-              <MicIcon className="icon" style={{ display: this.state.micOn ? 'inline' : 'none' }} onClick={this.onMicPress} />
-              <MicOffIcon className="icon" style={{ display: !this.state.micOn ? 'inline' : 'none' }} onClick={this.onMicPress} />
-              <VideocamIcon className="icon" style={{ display: this.state.cameraOn ? 'inline' : 'none' }} onClick={this.onCameraPress} />
-              <VideocamOffIcon className="icon" style={{ display: !this.state.cameraOn ? 'inline' : 'none' }} onClick={this.onCameraPress} />
-              <ClassroomMenu quitClassroom={this.quitClassroom} />
-              <HelpButton style={{ display: this.state.viewMode === 'Cameras' ? 'none' : 'inline' }}
-                helpInformation="-Use WASD to move your character(blue hat).
+            <div className="top_menu">
+              <div className="top_left_menu">
+                <ClassroomMenu quitClassroom={this.quitClassroom} />
+                <MicIcon className="icon" style={{ display: this.state.micOn ? 'inline' : 'none' }} onClick={this.onMicPress} />
+                <MicOffIcon className="icon" style={{ display: !this.state.micOn ? 'inline' : 'none' }} onClick={this.onMicPress} />
+                <VideocamIcon className="icon" style={{ display: this.state.cameraOn ? 'inline' : 'none' }} onClick={this.onCameraPress} />
+                <VideocamOffIcon className="icon" style={{ display: !this.state.cameraOn ? 'inline' : 'none' }} onClick={this.onCameraPress} />
+                <HelpButton style={{ display: this.state.viewMode === 'Cameras' ? 'none' : 'inline' }}
+                  helpInformation="-Use WASD to move your character(blue hat).
           -Try moving to a seat and pressing F to sit down and view the lecture."
-              />
+                />
+              </div>
+              <button
+                type="button"
+                style={{ display: this.state.allowTopDownView ? 'inline' : 'none' }}
+                onClick={this.onToggleView}
+              >
+                {this.state.viewMode === 'Cameras' ? '2D Top Down View' : 'Regular Camera View'}
+              </button>
             </div>
-            <button
-              type="button"
-              style={{ display: this.state.allowTopDownView ? 'inline' : 'none' }}
-              onClick={this.onToggleView}
-            >
-              {this.state.viewMode === 'Cameras' ? '2D Top Down View' : 'Regular Camera View'}
-            </button>
-            <div className="chat_button" role="button">
+            <div className="chat_button bottom_left" role="button">
               <div className="t_chat" />
               <p>to chat</p>
             </div>
@@ -154,11 +156,11 @@ class Classroom extends Component {
         <div className="classroom_container">
           <div className="top_menu">
             <div className="top_left_menu">
+              <ClassroomMenu quitClassroom={this.quitClassroom} />
               <MicIcon className="icon" style={{ display: this.state.micOn ? 'inline' : 'none' }} onClick={this.onMicPress} />
               <MicOffIcon className="icon" style={{ display: !this.state.micOn ? 'inline' : 'none' }} onClick={this.onMicPress} />
               <VideocamIcon className="icon" style={{ display: this.state.cameraOn ? 'inline' : 'none' }} onClick={this.onCameraPress} />
               <VideocamOffIcon className="icon" style={{ display: !this.state.cameraOn ? 'inline' : 'none' }} onClick={this.onCameraPress} />
-              <ClassroomMenu quitClassroom={this.quitClassroom} />
             </div>
             <div className="side_cameras">
               <button type="button" onClick={this.onToggleCameras}>Toggle Classmate Cameras</button>
