@@ -144,13 +144,13 @@ class JoinMeetingPage extends Component {
   renderView() {
     if (this.state.currentView === 'ClassCode') {
       return (
-        <div className="class_code_input_container">
+        <div className="class_code_input_container out">
           <TopNav />
           <div className="class_code_container">
             <h1>Enter Classroom Code</h1>
             <input type="text" pattern="[0-9]*" className="class_code_input" onChange={this.onClassCodeChange} onKeyDown={this.handleCodeEnterPress} value={this.state.classCode} />
-            <button type="button" onClick={this.onClearPress} className="button">Clear</button>
             <button type="button" onClick={this.onCodeConfirmPress} className="button">Confirm</button>
+            <button type="button" onClick={this.onClearPress} className="button">Clear</button>
             <HelpButton helpInformation="
             Your professor should have provided you this code!
             If not, ask your professor about it! They can find
@@ -164,24 +164,26 @@ class JoinMeetingPage extends Component {
       );
     } else if (this.state.currentView === 'JoinInfo') {
       return (
-        <div className="join_info_container">
+        <div className="join_info_container out">
           <TopNav />
-          <h1>You will join:</h1>
-          <div className="join_info_body">
-            <p><b>Class:</b> {this.state.joinClassName}</p>
-            <p><b>School:</b> {this.state.schoolName}</p>
-            <p><b>Professor:</b> {this.state.professor}</p>
-            <p><b>Current Student Number:</b> {this.state.currentStudentNumber}</p>
+          <div className="joininfo_container">
+            <h1>You will join:</h1>
+            <div className="join_info_body">
+              <p><b>Class:</b> {this.state.joinClassName}</p>
+              <p><b>School:</b> {this.state.schoolName}</p>
+              <p><b>Professor:</b> {this.state.professor}</p>
+              <p><b>Current Student Number:</b> {this.state.currentStudentNumber}</p>
+            </div>
+            <button type="button" onClick={this.onClassroomConfirmPress} className="button">Confirm</button>
+            <button type="button" onClick={this.onReEnterPress} className="button re-enter">Re-enter Class Code</button>
+            <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
           </div>
-          <button type="button" onClick={this.onReEnterPress} className="button">Re-enter Class Code</button>
-          <button type="button" onClick={this.onClassroomConfirmPress} className="button">Confirm</button>
-          <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
         </div>
       );
     } else if (this.state.currentView === 'EnterName') {
       return (
 
-        <div className="enter_name_container">
+        <div className="enter_name_container out">
           <TopNav />
           <div className="name_container">
             <h1>What is your name?</h1>
@@ -194,18 +196,20 @@ class JoinMeetingPage extends Component {
       );
     } else if (this.state.currentView === 'ToggleTopDownView') {
       return (
-        <div className="enable_top_down_view_container">
+        <div className="enable_top_down_view_container out">
           <TopNav />
-          <h1>Enable 2d top down view?</h1>
-          <p>
-            The host has allowed use of 2d top down view mode,
-            do you want to enable it? (You can enable or disable
-            it at any time during a meeting by clicking the button
-            in the bottom right of your screen)
-          </p>
-          <button type="button" onClick={this.onNoPress} className="button">No</button>
-          <button type="button" onClick={this.onYesPress} className="button">Yes</button>
-          <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
+          <div className="enable_container">
+            <h1>Enable 2d top down view?</h1>
+            <p className="help_info">
+              The host has allowed use of 2d top down view mode,
+              do you want to enable it? (You can enable or disable
+              it at any time during a meeting by clicking the button
+              in the bottom right of your screen)
+            </p>
+            <button type="button" onClick={this.onYesPress} className="button">Yes</button>
+            <button type="button" onClick={this.onNoPress} className="button">No</button>
+            <ArrowBackIosIcon className="icon" onClick={this.onBackPress} />
+          </div>
         </div>
       );
     } else {

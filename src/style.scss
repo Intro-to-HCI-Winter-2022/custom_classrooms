@@ -3,7 +3,7 @@ $app-color-2: #111111;
 $app-color-3: #3fff34;
 $app-color-4: #e6e6e6;
 $app-purple:#916ed8;
-
+$app-blue: #32bad8;
 
 
 body, html {
@@ -23,6 +23,10 @@ body, html {
   height: 300px;
 }
 
+.mainpage_logo{
+  margin-bottom: 50px;
+}
+
 .small_logo{
   width: 100px;
   height: 100px;
@@ -32,7 +36,6 @@ body, html {
   background-image: url('../public/assets/logo.png');
   background-repeat: no-repeat;
   background-size: contain;
-  margin-bottom: 50px;
 }
 
 mark {
@@ -198,9 +201,6 @@ h1{
   left:40px;
 }
 
-.class_code_input_container{
-  margin:10px;
-}
 
 .class_code_container{
   display:flex;
@@ -242,3 +242,108 @@ h1{
    left: 1300px;
    bottom:40px;
 }
+
+.joininfo_container{
+  display:flex;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.join_info_body{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color:$app-purple
+}
+
+.re-enter{
+  width: 500px;
+  font-size: 15px;
+}
+
+.out{
+  margin:30px;
+}
+
+.enable_container{
+  display:flex;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin:50px;
+}
+
+.help_info{
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-left: 150px;
+  margin-right:150px;
+  color:$app-purple
+}
+
+
+
+.sign_in_up_container{
+  height: 700px;
+
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form_input{
+  color:$app-purple;
+}
+
+.inputbar{
+  display:inline-block;
+  margin: 10px;
+}
+
+.signin_bar{
+  margin-left: 20px;
+  width: 300px;
+  height: 10px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  background-color:#916ed8;
+  font-size: 20px;
+  color:#ffffff
+}
+
+.signin_button{
+    margin-top:80px;
+    margin-left: 200px;
+  }
+
+ .switch_sign_in_and_up{
+   font-size: 30px;
+   color:$app-purple;
+ } 
+
+ .signup_hint{
+  display:inline-block;
+  margin-left: 100px;
+  margin-right:10px;
+ }
+
+ .signup{
+   color:$app-blue;
+   font-size:25px;
+   text-decoration: none;
+ }
+
+ .warning{
+   font-size:25px;
+   margin-left:130px;
+ }
+
+
+  
+
+
