@@ -6,6 +6,7 @@ import characterReducer from '../slices/characterSlice';
 import mapImagesReducer from '../slices/mapImagesSlice';
 import statusReducer from '../slices/statusSlice';
 import UserReducer from './user-reducer';
+import ClassroomReducer from './classroom-reducer';
 
 const rootReducer = combineReducers({
   auth: AuthReducer,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   gameStatus: statusReducer,
   character: characterReducer,
   user: UserReducer,
+  classroom: ClassroomReducer,
 });
 
 export default rootReducer;
