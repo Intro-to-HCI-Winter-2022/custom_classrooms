@@ -163,3 +163,11 @@ button {
   top: 0;
   background-color: rgba($app-color-1, 0.5);
 }
+
+.shared_slide {
+  background-image: url('../public/assets/shared_slide.png');
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

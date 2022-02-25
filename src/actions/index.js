@@ -49,7 +49,7 @@ export function changeSeat(newSeat, newParticipantList) {
 }
 
 // fetching list of participants
-export function getClassroom() {
+export function getClassroom(classCode) {
   return (dispatch) => {
     // If we had backend, we could fetch a classroom from a database with a list of
     // active classrooms.

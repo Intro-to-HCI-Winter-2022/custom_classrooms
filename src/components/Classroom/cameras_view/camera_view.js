@@ -58,7 +58,12 @@ class CameraView extends Component {
     } else {
       // camera off views
       return (
-        <div style={{ height: WIDTH, width: WIDTH, backgroundColor: 'white' }}>
+        <div
+          onClick={this.props.seatNumber === 0 ? this.props.onProfessorPress : () => {}}
+          role="button"
+          tabIndex={0}
+          style={{ height: WIDTH, width: WIDTH, backgroundColor: 'white' }}
+        >
           <VideocamOffIcon className="icon" />
           <p>{this.props.participantName}</p>
         </div>

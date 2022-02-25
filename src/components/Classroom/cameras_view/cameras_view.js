@@ -3,16 +3,30 @@ import { connect } from 'react-redux';
 import CameraView from './camera_view';
 
 const CamerasView = (props) => {
-  let key = 12;
+  let key = 13;
   const cameras = props.participants.map((element, index) => {
     key += 1;
     if (index) {
       return (
-        <CameraView unAuthName={props.studentName} className="student_cam" mic={props.mic} video={props.video} participantName={element} seatNumber={index} key={key} />
+        <CameraView
+          unAuthName={props.studentName}
+          className="student_cam"
+          mic={props.mic}
+          video={props.video}
+          participantName={element}
+          seatNumber={index}
+          key={key}
+        />
       );
     } else {
       return (
-        <CameraView onClick={props.onProfessorClick} className="professor_cam" participantName={element} seatNumber={index} key={key} />
+        <CameraView
+          onProfessorPress={props.onProfessorClick}
+          className="professor_cam"
+          participantName={element}
+          seatNumber={index}
+          key={key}
+        />
       );
     }
   });
