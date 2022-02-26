@@ -37,6 +37,14 @@ body, html {
   background-size: contain;
 }
 
+.account_icon{
+  background-image: url('../public/assets/account_icon.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:50px;
+  height:50px;
+}
+
 mark {
   background: none;
   color: $app-blue;
@@ -306,6 +314,13 @@ h1{
    bottom:40px;
 }
 
+.help_title{
+  font-size: 35px;
+  margin-bottom: 20px ;
+  font-style: bold;
+  color: white;
+}
+
 .join_info_container{
   display:flex;
   height: 400px;
@@ -352,8 +367,9 @@ h1{
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
+  margin-top: 50px;
+  font-size: 30px;
 }
-
 
 
 .sign_in_up_container{
@@ -571,3 +587,26 @@ $in-w: $n-char*($char-w + $gap);
   font-weight: bold;
 }
 
+.help_pop_up{
+  border-radius: 40px;
+}
+
+.help_info_container{
+   color:white;
+   margin: 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.ok_button{
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  margin: 20px;
+  width: fit-content;
+  cursor: pointer;
+  background-color:$app-white;
+  color:$app-purple;
+  font-size: 30px;
+}
