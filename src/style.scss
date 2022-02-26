@@ -69,11 +69,25 @@ nav {
   justify-content: flex-start;
 }
 
-
-
-.sign_in_up{
+.sign_in_up_container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.sign_in_up_form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.sign_in_up_button_and_text_container {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -172,12 +186,13 @@ button {
 }
 
 .name_container{
+  height: 70vh;
   display:flex;
-  height: 400px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
+
 
 h1{
   font-size:50px;
@@ -189,12 +204,12 @@ h1{
   margin-top: 40px;
   background-color: $app-purple;
   border: none;
-  width: 450px;
-  height: 30px;
+  width: 500px;
+  height: 50px;
   border-radius: 18px;
   margin-bottom: 100px;
   color: white;
-  font-size:18px;
+  font-size:28px;
   outline-style: none;
   text-indent: 20px;
 
@@ -217,11 +232,12 @@ h1{
 
 .class_code_container{
   display:flex;
-  height: 400px;
+  height: 70vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 
 .class_code_input{
   margin-top: 40px;
@@ -309,7 +325,7 @@ h1{
 
 .join_info_container{
   display:flex;
-  height: 400px;
+  height: 70vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -333,7 +349,7 @@ h1{
 
 .enable_container{
   display:flex;
-  height: 400px;
+  height: 60vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -359,7 +375,7 @@ h1{
 
 
 .sign_in_up_container{
-  height: 700px;
+  height: 100vh;
 
   display:flex;
   justify-content: center;
@@ -387,38 +403,35 @@ h1{
   font-size: 20px;
   color: $app-white;
 }
-
-.signin_button{
-    margin-top:80px;
-    margin-left: 200px;
-  }
-
  .switch_sign_in_and_up{
    font-size: 30px;
    color:$app-purple;
+   display: flex;
+   text-align: center;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
  } 
 
  .signup_hint{
   display:inline-block;
-  margin-left: 100px;
   margin-right:10px;
  }
 
  .signup{
-   color:$app-blue;
+   color: $app-blue;
    font-size:25px;
    text-decoration: none;
  }
 
  .warning{
    font-size:25px;
-   margin-left:130px;
+  
  }
 
 .home_container{
-  height: 500px;
-
   display:flex;
+  height: 70vh;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -487,12 +500,25 @@ h1{
 .menu_pop_up {
   // used this resource to figure out how to center modal: https://stackoverflow.com/questions/39627549/how-to-center-modal-to-the-center-of-screen
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
+  left: 0;
+  top: 0;
+  width: fit-content;
   height: fit-content;
-  background-color: purple;
+  background-color: $app-purple;
+  display: flex;
+  flex-direction: column;
+  button {
+    background-color: $app-white;
+    color: $app-purple;
+  }
+  border-radius: 2px;
+  box-shadow: 2px 2px rgba(black, 0.2);
+}
+
+.menu_pop_up_buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .menu_background {
@@ -545,9 +571,25 @@ $in-w: $n-char*($char-w + $gap);
   }
 }
 .shared_slide{
-  height: 62vh;
+  height: 60vh;
   width: auto;
 }
+.side_cameras{
+  .cams {
+    position: fixed;
+    margin-left: 26.5px;
+  }
+}
+#toggle_cameras {
+  width: 300px,
+}
+
+.choose_seat {
+  color: $app-purple;
+  text-align: center;
+  font-weight: bold;
+}
+
 .help_pop_up{
   border-radius: 40px;
 }
