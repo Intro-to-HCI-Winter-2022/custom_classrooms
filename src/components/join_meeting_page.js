@@ -209,7 +209,7 @@ class JoinMeetingPage extends Component {
           <TopNav />
           <div className="enable_container">
             <h1>Enable 2d top down view?</h1>
-            <p className="help_info">
+            <p className="help_info" id="top_down_view_info">
               The host has allowed use of 2d top down view mode,
               do you want to enable it? (You can enable or disable
               it at any time during a meeting by clicking the button

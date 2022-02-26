@@ -397,6 +397,14 @@ h1{
   margin: 10px;
 }
 
+.signin_bar:focus {
+  outline-color: $app-blue;
+}
+
+#top_down_view_info {
+  max-width: 700px;
+}
+
 .signin_bar{
   margin-left: 20px;
   width: 300px;
@@ -404,7 +412,7 @@ h1{
   border-radius: 10px;
   border: none;
   padding: 10px;
-  background-color:#916ed8;
+  background-color: $app-purple;
   font-size: 20px;
   color: $app-white;
 }
