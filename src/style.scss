@@ -186,12 +186,13 @@ button {
 }
 
 .name_container{
+  height: 70vh;
   display:flex;
-  height: 400px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
+
 
 h1{
   font-size:50px;
@@ -203,12 +204,12 @@ h1{
   margin-top: 40px;
   background-color: $app-purple;
   border: none;
-  width: 450px;
-  height: 30px;
+  width: 500px;
+  height: 50px;
   border-radius: 18px;
   margin-bottom: 100px;
   color: white;
-  font-size:18px;
+  font-size:28px;
   outline-style: none;
   text-indent: 20px;
 
@@ -231,11 +232,12 @@ h1{
 
 .class_code_container{
   display:flex;
-  height: 400px;
+  height: 70vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 
 .class_code_input{
   margin-top: 40px;
@@ -323,7 +325,7 @@ h1{
 
 .join_info_container{
   display:flex;
-  height: 400px;
+  height: 70vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -347,7 +349,7 @@ h1{
 
 .enable_container{
   display:flex;
-  height: 400px;
+  height: 60vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -373,7 +375,7 @@ h1{
 
 
 .sign_in_up_container{
-  height: 700px;
+  height: 100vh;
 
   display:flex;
   justify-content: center;
@@ -429,6 +431,7 @@ h1{
 
 .home_container{
   display:flex;
+  height: 70vh;
   justify-content: center;
   flex-direction: column;
   align-items: center;
