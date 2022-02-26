@@ -15,14 +15,14 @@ const HomePage = (props) => {
       <div className="home_container">
         <p className="home_hint">Hey <mark className="signup">{props.username}</mark>, would you like to join, start, or design a classroom?</p>
         <nav className="home_navigation_buttons">
-          <ul>
+          <ul className="buttons">
             <li><NavLink to="/joinmeeting" exact><div className="join_logo" /></NavLink></li>
             <li><NavLink to="/homepage" exact><div className="start_logo" /></NavLink></li>
             <li><NavLink to="/homepage" exact><div className="design_logo" /></NavLink></li>
           </ul>
         </nav>
       </div>
-      <button className="logout_button" type="button" onClick={onLogOutPress}>Log Out</button>
+      <button className="logout_button bottom_left" type="button" onClick={onLogOutPress}>Log Out</button>
     </div>
   );
 };

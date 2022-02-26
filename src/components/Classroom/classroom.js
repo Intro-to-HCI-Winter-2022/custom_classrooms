@@ -129,8 +129,7 @@ class Classroom extends Component {
                 <VideocamIcon className="icon" style={{ display: this.state.cameraOn ? 'inline' : 'none' }} onClick={this.onCameraPress} />
                 <VideocamOffIcon className="icon" style={{ display: !this.state.cameraOn ? 'inline' : 'none' }} onClick={this.onCameraPress} />
                 <HelpButton style={{ display: this.state.viewMode === 'Cameras' ? 'none' : 'inline' }}
-                  helpInformation=" Use WASD to move your character (blue hat).
-                  Try moving to a seat and pressing F to sit down and view the lecture."
+                  helpInformation="Use WASD to move your character. For now, this is the only feature, but there will be more in the full build. Check out our figma to see what we mean!"
                 />
               </div>
               <button

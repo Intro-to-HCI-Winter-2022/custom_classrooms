@@ -165,7 +165,7 @@ class JoinMeetingPage extends Component {
               <button type="button" onClick={this.onCodeConfirmPress} className="button">Confirm</button>
             </div>
             <ArrowBackIosIcon className="icon bottom_left" onClick={this.onBackPress} />
-            <p style={{ display: this.state.showCodeErrorMessage }}>A Classroom with that code does not exist!</p>
+            <p className="warning" style={{ display: this.state.showCodeErrorMessage }}>A Classroom with that code does not exist!</p>
           </div>
         </div>
       );
@@ -197,7 +197,7 @@ class JoinMeetingPage extends Component {
             <input className="enter_name_input" onChange={this.onNameChange} onKeyDown={this.handleNameEnterPress} value={this.state.unAuthUserName} />
             <button type="button" onClick={this.onNameConfirmPress} className="name_button">Confirm</button>
             <ArrowBackIosIcon className="icon bottom_left" onClick={this.onBackPress} />
-            <p style={{ display: this.state.showNameErrorMessage }}>Please enter a name.</p>
+            <p className="warning" style={{ display: this.state.showNameErrorMessage }}>Please enter a name.</p>
           </div>
         </div>
       );

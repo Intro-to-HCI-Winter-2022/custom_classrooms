@@ -79,11 +79,10 @@ class SignInAndUp extends Component {
   }
 
   onSwitchPress = (event) => {
-    if (this.props.match.path === '/signin') {
-      this.props.history.push('/signup');
-    } else {
-      this.props.history.push('/signin');
-    }
+    this.setState({
+      displayWarning: 'none',
+      displayPasswordWarning: 'none',
+    });
   }
 
   onBackPress = (event) => {
@@ -143,7 +142,7 @@ class SignInAndUp extends Component {
           <button type="button" onClick={this.onConfirmPress} className="button signin_button">{buttonText}</button>
           <div className="switch_sign_in_and_up">
             <p className="signup_hint">{switchText}</p>
-            <Link className="signup" to={switchTo}>{switchButtonText}</Link>
+            <Link onClick={this.onSwitchPress} className="signup" to={switchTo}>{switchButtonText}</Link>
           </div>
         </div>
         <div id="warning" className="warning" style={{ display: `${this.state.displayWarning}` }}>Please fill out all fields.</div>
