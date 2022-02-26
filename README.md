@@ -15,7 +15,6 @@ GitHub usernames for each team member:
 
 - Have node.js installed
 - Do npm install
-- Do npm update
 - Do npm start
 
 ## Tutorials used
