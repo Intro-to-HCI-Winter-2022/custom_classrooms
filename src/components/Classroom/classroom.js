@@ -98,7 +98,6 @@ class Classroom extends Component {
         return (
           <div key={key} style={{ display: this.state.showSideCameras ? 'inline' : 'none' }}>
             <CameraView
-              style={{ position: 'absolute' }}
               unAuthName={this.props.studentName}
               className="student_side_cam"
               mic={this.props.mic}
@@ -150,6 +149,7 @@ class Classroom extends Component {
           <div className="classroom_view">
             {this.renderStandardViewOrTopDown()}
           </div>
+          <div className="choose_seat" style={{ display: (this.props.currentSeat < 0) && (this.state.viewMode === 'Cameras') ? 'inline' : 'none' }}>Choose an empty seat highlighted in blue!</div>
         </div>
       );
     } else {
@@ -164,8 +164,10 @@ class Classroom extends Component {
               <VideocamOffIcon className="icon" style={{ display: !this.state.cameraOn ? 'inline' : 'none' }} onClick={this.onCameraPress} />
             </div>
             <div className="side_cameras">
-              <button type="button" onClick={this.onToggleCameras}>Toggle Classmate Cameras</button>
-              {this.renderSideCameras()}
+              <button id="toggle_cameras" type="button" onClick={this.onToggleCameras}>Toggle Classmate Cameras</button>
+              <div className="cams">
+                {this.renderSideCameras()}
+              </div>
             </div>
           </div>
           <div className="shared_slide" />

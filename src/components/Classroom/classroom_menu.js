@@ -27,8 +27,10 @@ class ClassroomMenu extends Component {
         <MenuIcon style={this.props.style} className="icon" onClick={this.onMenuPress} />
         <div className="menu_background" style={{ display: this.state.modalDisplay }} role="region" onClick={this.onOutsidePress} />
         <div z-index={1} style={{ display: this.state.modalDisplay }} className="menu_pop_up">
-          <button type="button" className="button">Account/Settings</button>
-          <button type="button" onClick={this.onQuitPress} className="button">Quit Classroom</button>
+          <div className="menu_pop_up_buttons">
+            <button type="button" className="button">Account/Settings</button>
+            <button type="button" onClick={this.onQuitPress} className="button">Quit Classroom</button>
+          </div>
         </div>
       </div>
     );

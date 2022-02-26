@@ -137,16 +137,18 @@ class SignInAndUp extends Component {
               <p className="inputbar">Email:</p>
               <input className="signin_bar" onChange={this.onEmailChange} onKeyDown={this.handleEnterPress} value={this.state.email} />
             </div>
-            <button type="button" onClick={this.onConfirmPress} className="button signin_button">{buttonText}</button>
-            <div className="switch_sign_in_and_up">
-              <p className="signup_hint">{switchText}</p>
-              <Link className="signup" to={switchTo}>{switchButtonText}</Link>
-            </div>
-            <div id="warning" className="warning" style={{ display: `${this.state.displayWarning}` }}>Please fill out all fields.</div>
-            <div id="warning" className="warning" style={{ display: `${this.state.displayPasswordWarning}` }}>Passwords do not match.</div>
           </div>
-          <ArrowBackIosIcon className="icon bottom_left" onClick={this.onBackPress} />
         </div>
+        <div className="sign_in_up_button_and_text_container">
+          <button type="button" onClick={this.onConfirmPress} className="button signin_button">{buttonText}</button>
+          <div className="switch_sign_in_and_up">
+            <p className="signup_hint">{switchText}</p>
+            <Link className="signup" to={switchTo}>{switchButtonText}</Link>
+          </div>
+        </div>
+        <div id="warning" className="warning" style={{ display: `${this.state.displayWarning}` }}>Please fill out all fields.</div>
+        <div id="warning" className="warning" style={{ display: `${this.state.displayPasswordWarning}` }}>Passwords do not match.</div>
+        <ArrowBackIosIcon className="icon bottom_left" onClick={this.onBackPress} />
       </div>
     );
   }
