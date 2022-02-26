@@ -98,14 +98,18 @@ p {
 button {
   border-radius: 10px;
   border: none;
-  padding: 10px;
-  margin: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
   width: fit-content;
   cursor: pointer;
   background-color:#916ed8;
   color: $app-white;
   font-size: 35px;
   box-shadow: 0px 2px rgba(black, 0.2);
+}
+.signin_button{
+  margin-top: 50px;
+  margin-right: 150px;
 }
 
 .icon, .chat_button{
@@ -217,8 +221,8 @@ h1{
 
 .name_button {
   border: none;
-  padding: 10px;
-  margin: 10px;
+  padding-left:30px;
+  padding-right:30px;
   cursor: pointer;
   background-color:#916ed8;
   font-size: 35px;
@@ -307,6 +311,8 @@ h1{
   cursor: pointer;
   background-color:#916ed8;
   font-size: 35px;
+  padding-left: 30px;
+  padding-right: 30px;
   color: $app-white;
 }
 
@@ -418,6 +424,8 @@ h1{
 }
  .switch_sign_in_and_up{
    font-size: 30px;
+   margin-right: 60px;
+   margin-top: 20px;
    color:$app-purple;
    display: flex;
    text-align: center;
