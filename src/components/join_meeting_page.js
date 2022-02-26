@@ -181,8 +181,10 @@ class JoinMeetingPage extends Component {
               <p><b>Professor:</b> {this.state.professor}</p>
               <p><b>Current Student Number:</b> {this.state.currentStudentNumber}</p>
             </div>
-            <button type="button" onClick={this.onClassroomConfirmPress} className="button">Confirm</button>
-            <button type="button" onClick={this.onReEnterPress} className="button">Re-enter Code</button>
+            <div>
+              <button type="button" onClick={this.onReEnterPress} className="button">Re-enter Code</button>
+              <button type="button" onClick={this.onClassroomConfirmPress} className="button">Confirm</button>
+            </div>
             <ArrowBackIosIcon className="icon bottom_left" onClick={this.onBackPress} />
           </div>
         </div>
@@ -213,8 +215,10 @@ class JoinMeetingPage extends Component {
               it at any time during a meeting by clicking the button
               in the bottom right of your screen)
             </p>
-            <button type="button" onClick={this.onYesPress} className="button">Yes</button>
-            <button type="button" onClick={this.onNoPress} className="button">No</button>
+            <div>
+              <button type="button" onClick={this.onNoPress} className="button">No</button>
+              <button type="button" onClick={this.onYesPress} className="button">Yes</button>
+            </div>
             <ArrowBackIosIcon className="icon bottom_left" onClick={this.onBackPress} />
           </div>
         </div>
