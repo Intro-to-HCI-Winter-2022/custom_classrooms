@@ -30,9 +30,9 @@ Flesh out Figma, must see! There are different paths for "Log-in" and "Join a Cl
 
 ## Architecture
 
-Figma 
-React 
-Redux
+- Figma 
+- React 
+- Redux
 
 ## Authors: 
 - [Jacob Werzinsky](https://github.com/jts307)
