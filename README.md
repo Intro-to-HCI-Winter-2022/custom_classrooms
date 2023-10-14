@@ -28,15 +28,11 @@ Flesh out Figma, must see! There are different paths for "Log-in" and "Join a Cl
 - Run `npm install` in terminal
 - Run `npm start` in terminal
 
-Architecture
-For all descriptions of code organization and tools and libraries used:
+## Architecture
 
-Figma - our initial prototype was made in Figma 
-React Native - to bring the app to your mobile devices
-Firebase/ MongoDB - database storage
-Heroku - for deployment
-Amazon S3 - object storage
-React Native Paper + other visualization libraries - styling
+Figma 
+React 
+Redux
 
 ## Authors: 
 - [Jacob Werzinsky](https://github.com/jts307)
