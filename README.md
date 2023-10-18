@@ -5,6 +5,9 @@ Our platform seeks to revolutionize the online classroom experience. First, our 
 
 Context: This project is the product of several rounds of interviews with professors and students. We wanted to build a product that addressed a clear need we found in these interviews. This need being the lack of humanity and sociability in the online classroom environment. 
 
+### Website that gives overview of project including user interviews and research
+https://journeys.dartmouth.edu/cs67group7project/
+
 ### Check out the Figma Design it's really fleshed out! 
 There are multiple branching pathes so click everything! Specifically there are different paths for "Log-in" and "Join a Classroom". IMPORTANT: To go forward on a few of the slides you must Click AND Drag the button/image! Here is the link: https://www.figma.com/proto/TmfQ1NezjDpw0PQUUePVvb/Untitled?type=design&node-id=110-4978&t=qpZnTZVdO67x8IG0-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=109%3A3338
 
